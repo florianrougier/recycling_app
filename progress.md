@@ -1,5 +1,9 @@
 # This file tracks our progress on this concept
 
+# Dataset
+
+Start with trashnet dataset. [Here is the link](https://github.com/garythung/trashnet)
+
 # Categories
 
 We decided to consider the following categories:
@@ -9,4 +13,4 @@ We decided to consider the following categories:
 - metal
 - paper
 - plastic
-- trash
+- trash (included or not included)
