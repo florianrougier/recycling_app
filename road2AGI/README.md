@@ -1,14 +1,13 @@
 # 
-App project - MMWML
+Here i am going to describe the model architecture
 
 ## Concept
 
+Without transfer learning - going to try the architecture described here:
+
+http://cs229.stanford.edu/proj2016/report/ThungYang-ClassificationOfTrashForRecyclabilityStatus-report.pdf
+
 # TODO
 
-Find a relevant dataset to start (https://github.com/garythung/trashnet).
-Select some classes we want to detect (glass, paper, plastic, metal...).
-Build an algorithm so differentiate between these classes.
-Using the product information, we can tell which container the product have to be put in.
+Everything
 
-
-https://www.kaggle.com/kerneler/starter-trash-imgs-6766da08-c
