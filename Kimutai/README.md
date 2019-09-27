@@ -2,6 +2,7 @@
 App project - MMWML
 
 ## Concept
+Because of small data, i used data augmentation to modify the images slightly to generate more images by zooming and flipping the image
 
 # TODO
 
