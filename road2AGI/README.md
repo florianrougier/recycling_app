@@ -9,5 +9,9 @@ http://cs229.stanford.edu/proj2016/report/ThungYang-ClassificationOfTrashForRecy
 
 # TODO
 
-Everything
+- Refine design
+-Reorganize repo
+- try different implementations
+- Use data augmentation
+
 

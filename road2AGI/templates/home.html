@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block body %}
+{% include "navbar.html" %}
+<section>
+      <h1 style="text-align:center;font-size: 36px;">Waste sorting classifier</h1>
+      <div style="margin: 0 auto;">
+          <div id="img-container" style="max-width:400px;height:300px;margin:30px auto;border-radius:20px;text-align:center;">
+              <img src="static/images/recycling.jpg" style="border-radius:20px; height:100%;">
+          </div>
+          <div style="text-align:center;">
+              <input type="file" id="file" style="display:none;" />
+              <button id="upload-button" style="background-color:#6772E5;color:#FFF;margin-right:50px;padding:8px 12px;border:0;border-radius:4px;font-size:1em;"
+                    name="button" value="Upload">
+                  Upload
+              </button>
+              <button id="predict-button" style="background-color:red;color:#FFF;margin-right:50px;padding:8px 12px;border:0;border-radius:4px;font-size:1em;">
+                  Predict
+              </button>
+              <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+              <button id="checkout-button-sku_Fsin2odwHZkwmH" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;" role="link">
+                Checkout
+              </button>
+              <div id="error-message"></div>
+              <div id="prediction"  style="font-size:30px;font-weight:bold;margin-top:30px"></div>
+              <div id="confidence"  style="font-size:20px;margin-top:10px"></div>
+          </div>
+      </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+<script>
+(function() {
+  var stripe = Stripe('pk_test_P353CGpyuA76VRvw9d6OZ2Zg00c59GqgbH');
+
+  var checkoutButton = document.getElementById('checkout-button-sku_Fsin2odwHZkwmH');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_Fsin2odwHZkwmH', quantity: 1}],
+
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfillment
+      successUrl: 'https://www.linkedin.com/in/florianrougier/?locale=en_US/success',
+      cancelUrl: 'https://www.linkedin.com/in/florianrougier/?locale=en_US/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+{% endblock %}

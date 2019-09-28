@@ -28,3 +28,8 @@ Steps:
 - cd into the App folder
 - pip install requirements.txt
 - python app.py
+
+---------------------------------
+28 september:
+
+A working implementation of a model made with fastai has been added. We can now predict basic classes.
