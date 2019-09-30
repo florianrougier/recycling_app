@@ -16,7 +16,7 @@ https://www.kaggle.com/kerneler/starter-trash-imgs-6766da08-c
 
 ## Improve the model
 
-Kimutai: zooming on images, data augmentation, more data
+Kimutai: zooming on images, data augmentation, more data, add organic class
 
 Keld: trying other models (resnet50, incetion, something other)
 
