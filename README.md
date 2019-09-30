@@ -12,3 +12,17 @@ Using the product information, we can tell which container the product have to b
 
 
 https://www.kaggle.com/kerneler/starter-trash-imgs-6766da08-c
+
+
+## Improve the model
+
+Kimutai: zooming on images, data augmentation, more data
+
+Keld: trying other models (resnet50, incetion, something other)
+
+
+## Improve the webapp
+
+road2AGI: design a better app, the user workflow, deploy on heroku
+
+angelinux: documenting application, dockerizing application
