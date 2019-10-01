@@ -1,4 +1,4 @@
-[![Recycling App](https://static.digitecgalaxus.ch/Files/6/9/6/9/7/6/6/XD-Design-3tlg-Recycling-Set-Waste-Bags__3791_0.jpg?fit=inside%7C464:368&output-format=progressive-jpeg)](http://herokuapp)
+[ ![Recycling](http://sites.psu.edu/aspsy/wp-content/uploads/sites/8070/2014/11/recycle.jpg)](http://herokuapp)
 
 # Recycling app - MMWML
 
@@ -42,10 +42,10 @@
 
 ## Team 
 
-| [![road2AGI](https://avatars0.githubusercontent.com/u/29116904?s=200&v=4)](https://github.com/florianrougier)
-| [![angelinux](https://avatars3.githubusercontent.com/u/1552481?s=200&v=4)](https://github.com/angelinux) 
-| [![kimutai](https://avatars2.githubusercontent.com/u/47734618?s=200&v=4)](https://github.com/marchemjor) 
-| [![Keld](https://avatars2.githubusercontent.com/u/54741534?s=200&v=4)](https://github.com/Keld-j) |
+[![road2AGI](https://avatars0.githubusercontent.com/u/29116904?s=200&v=4)](https://github.com/florianrougier)
+[![angelinux](https://avatars3.githubusercontent.com/u/1552481?s=200&v=4)](https://github.com/angelinux)
+[![Keld](https://avatars2.githubusercontent.com/u/54741534?s=200&v=4)](https://github.com/Keld-j) 
+[![kimutai](https://avatars2.githubusercontent.com/u/47734618?s=200&v=4)](https://github.com/marchemjor) 
 
 ---
 
