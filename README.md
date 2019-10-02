@@ -30,6 +30,11 @@
 
 ## Installation
 
+1. Install Docker
+2. Run ```  docker build -t recycling_app:latest . ``` to build your image
+3. Execute ``` docker run -d -p 5000:5000 recycling_app ```
+4. Go to your browser [http://127.0.0.1:5000/](http://127.0.0.1:5000/) and enjoy!
+
 ---
 
 ## Features
