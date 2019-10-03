@@ -159,4 +159,4 @@ def classify_image(img_name):
 
 # ======== Main ============================================================== #
 if __name__ == "__main__":
-    app.run(debug=True, use_reloader=True)
+    app.run(host='0.0.0.0', debug=True, use_reloader=True)
