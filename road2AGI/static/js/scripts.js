@@ -1,21 +1,15 @@
-// Custom code
-
-// Global variable
 var img_name = "";
 
-var upload = function() {
+var chooseFile = function() {
     $('#file').click();  //returns a jQuery Object
 };
 
-var displayImage = function() {
-    var preview = document.querySelector('img');
-    var file    = document.querySelector('input[type=file]').files[0];
+var displayImage = function(file) {
+    var preview = document.querySelector('#img-displayed');
+
     var reader = new FileReader();
-    
-    img_name = this.value.split("\\")[2];    
-      
+
     reader.addEventListener("load", function () {
-        $("#img-container").css("background-color", "white");
         preview.src = reader.result;
     }, false);
 
@@ -24,13 +18,39 @@ var displayImage = function() {
     }
 };
 
+// Dropzone custom code
+Dropzone.options.myAwesomeDropzone = {
+  accept: function(file, done) {
+    console.log("uploadedfile: " + file.name);
+    img_name = file.name;
+    displayImage(file);
+    done();
+  },
+  init: function() {
+    this.on("addedfile", function() {
+      if (this.files[1]!=null){
+        this.removeFile(this.files[0]);
+      }
+    });
+    this.on("processing", function(file) {
+      this.options.url = "/files/" + img_name;
+    });
+    this.on("complete", function(file) {
+      this.removeFile(file);
+    });
+  },
+  success: function(file, response){
+    console.log(response);
+  }
+}
+
 
 // Basic stripe app code
 
 function message(status, shake=false, id="") {
   if (shake) {
     $("#"+id).effect("shake", {direction: "right", times: 2, distance: 8}, 250);
-  } 
+  }
   document.getElementById("feedback").innerHTML = status;
   $("#feedback").show().delay(2000).fadeOut();
 }
@@ -43,7 +63,7 @@ var login = function() {
   $.post({
     type: "POST",
     url: "/",
-    data: {"username": $("#login-user").val(), 
+    data: {"username": $("#login-user").val(),
            "password": $("#login-pass").val()},
     success(response){
       var status = JSON.parse(response)["status"];
@@ -55,11 +75,8 @@ var login = function() {
 
 $(document).ready(function() {
 
-  $(document).on("click", "#upload-button", upload);
-  $("#file").change(displayImage);
+  $(document).on("click", "#upload-button", chooseFile);
 
-
-  
   $(document).on("click", "#login-button", login);
   $(document).keypress(function(e) {if(e.which === 13) {login();}});
 
@@ -70,16 +87,19 @@ $(document).ready(function() {
       success(response) {
        $("#prediction").text("Prediction: " + response.object_detected);
        $("#confidence").text("Confidence: " + response.confidence);
-      }
+     },
+     error(response) {
+       console.log(response);
+     }
     });
   });
-  
+
   $(document).on("click", "#signup-button", function() {
     $.post({
       type: "POST",
       url: "/signup",
-      data: {"username": $("#signup-user").val(), 
-             "password": $("#signup-pass").val(), 
+      data: {"username": $("#signup-user").val(),
+             "password": $("#signup-pass").val(),
              "email": $("#signup-mail").val()},
       success(response) {
         var status = JSON.parse(response)["status"];
@@ -93,8 +113,8 @@ $(document).ready(function() {
     $.post({
       type: "POST",
       url: "/settings",
-      data: {"username": $("#settings-user").val(), 
-             "password": $("#settings-pass").val(), 
+      data: {"username": $("#settings-user").val(),
+             "password": $("#settings-pass").val(),
              "email": $("#settings-mail").val()},
       success(response){
         message(JSON.parse(response)["status"]);

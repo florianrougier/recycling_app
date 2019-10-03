@@ -4,25 +4,26 @@
 <section>
       <h1 style="text-align:center;font-size: 36px;">Waste sorting classifier</h1>
       <div style="margin: 0 auto;">
-          <div id="img-container" style="max-width:400px;height:300px;margin:30px auto;border-radius:20px;text-align:center;">
-              <img src="static/images/recycling.jpg" style="border-radius:20px; height:100%;">
+          <div id="img-container" style="max-width:500px;height:40%;margin:30px auto;border-radius:20px;text-align:center;">
+              <img id="img-displayed" src="static/images/recycling.jpg" style="border-radius:20px; height:100%;">
           </div>
           <div style="text-align:center;">
-              <input type="file" id="file" style="display:none;" />
-              <button id="upload-button" style="background-color:#6772E5;color:#FFF;margin-right:50px;padding:8px 12px;border:0;border-radius:4px;font-size:1em;"
-                    name="button" value="Upload">
-                  Upload
-              </button>
-              <button id="predict-button" style="background-color:red;color:#FFF;margin-right:50px;padding:8px 12px;border:0;border-radius:4px;font-size:1em;">
-                  Predict
-              </button>
-              <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-              <button id="checkout-button-sku_Fsin2odwHZkwmH" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;" role="link">
-                Checkout
-              </button>
-              <div id="error-message"></div>
-              <div id="prediction"  style="font-size:30px;font-weight:bold;margin-top:30px"></div>
-              <div id="confidence"  style="font-size:20px;margin-top:10px"></div>
+            <div style="max-width:500px;border: 1px dashed blue;margin: 30px auto;">
+              <form style="padding:30px;cursor:pointer;"
+                action="/files"
+                class="dropzone"
+                id="my-awesome-dropzone"></form>
+            </div>
+            <button id="predict-button" style="background-color:red;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;">
+                Predict
+            </button>
+            <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+            <button id="checkout-button-sku_Fsin2odwHZkwmH" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;" role="link">
+              Checkout
+            </button>
+            <div id="error-message"></div>
+            <div id="prediction"  style="font-size:30px;font-weight:bold;margin-top:30px"></div>
+            <div id="confidence"  style="font-size:20px;margin-top:10px"></div>
           </div>
       </div>
 </section>
@@ -47,8 +48,8 @@
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.linkedin.com/in/florianrougier/?locale=en_US/success',
-      cancelUrl: 'https://www.linkedin.com/in/florianrougier/?locale=en_US/canceled',
+      successUrl: 'https://www.youtube.com/watch?v=d9gwmyPMByM',
+      cancelUrl: 'https://www.youtube.com/watch?v=qt-iccuOSLI',
     })
     .then(function (result) {
       if (result.error) {
