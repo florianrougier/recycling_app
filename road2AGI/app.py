@@ -15,13 +15,13 @@ import os
 # Stage 2: Load the pretrained model
 
 # Loading the model
-model = load_learner('', 'trained_model.pkl')
+model = load_learner('', 'error_0_6.pkl')
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)  # Generic key for dev purposes only
 
 # Define the upload directory for images and allowed extensions
-UPLOAD_DIRECTORY = "uploads/"
+UPLOAD_DIRECTORY = "static/images/uploads/"
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 # Heroku
@@ -101,7 +101,7 @@ def list_files():
         path = os.path.join(UPLOAD_DIRECTORY, filename)
         if os.path.isfile(path):
             files.append(filename)
-    return jsonify(files)
+    return render_template('files.html', img_names=files)
 
 
 # -------- Download a file  ---------------------------------------------------------- #
@@ -146,17 +146,28 @@ def classify_image(img_name):
 
     # First the image has to be uploaded to the UPLOAD_DIRECTORY
 
-    image = open_image(UPLOAD_DIRECTORY + img_name)
+    image = open_image(os.path.join(UPLOAD_DIRECTORY, img_name))
 
     classes = ["Cardboard", "Glass", "Metal", "Paper", "Plastic"]
 
     pred_class, pred_idx, outputs = model.predict(image)
 
 
-    return jsonify({"object_detected": classes[pred_idx],
-                    "confidence": "%.3f" % outputs[pred_idx]})
+    return jsonify(object_detected = classes[pred_idx],
+                  confidence = "%.3f" % outputs[pred_idx])
+
+# -------- Success route ---------------------------------------------------------- #
+@app.route("/success")
+def payment_success():
+    return render_template('success.html')
+
+
+# -------- Error route ---------------------------------------------------------- #
+@app.route("/error")
+def payment_error():
+    return render_template('error.html')
 
 
 # ======== Main ============================================================== #
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True, use_reloader=True)
+    app.run(debug=True, use_reloader=True)

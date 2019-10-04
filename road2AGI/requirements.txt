@@ -2,7 +2,7 @@ Flask
 WTForms
 SQLAlchemy
 bcrypt
-requests
+requests>=2.20
 flask-heroku
 gunicorn
 stripe

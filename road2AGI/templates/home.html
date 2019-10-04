@@ -18,7 +18,7 @@
                 Predict
             </button>
             <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-            <button id="checkout-button-sku_Fsin2odwHZkwmH" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;" role="link">
+            <button id="checkout-button-plan_FvdH5kQs0jpg2r" style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;" role="link">
               Checkout
             </button>
             <div id="error-message"></div>
@@ -29,27 +29,27 @@
 </section>
 {% endblock %}
 {% block scripts %}
-<script src="../static/js/scripts.js"></script>
+<script src="static/js/scripts.js"></script>
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 <script>
 (function() {
   var stripe = Stripe('pk_test_P353CGpyuA76VRvw9d6OZ2Zg00c59GqgbH');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_Fsin2odwHZkwmH');
+  var checkoutButton = document.getElementById('checkout-button-plan_FvdH5kQs0jpg2r');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_Fsin2odwHZkwmH', quantity: 1}],
+      items: [{plan: 'plan_FvdH5kQs0jpg2r', quantity: 1}],
 
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.youtube.com/watch?v=d9gwmyPMByM',
-      cancelUrl: 'https://www.youtube.com/watch?v=qt-iccuOSLI',
+      successUrl: 'https://trash-classifier-ai.herokuapp.com/success',
+      cancelUrl: 'https://trash-classifier-ai.herokuapp.com/error',
     })
     .then(function (result) {
       if (result.error) {
