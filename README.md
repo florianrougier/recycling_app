@@ -81,4 +81,4 @@ No FAQ here at the moment
 
 ## License
 
-
+Available [here](LICENSE)
