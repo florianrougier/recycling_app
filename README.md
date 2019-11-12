@@ -2,7 +2,7 @@
 
 # Recycling app - MMWML
 
-!!! NEW [Go to mobile version](Flutter app/mobile_README.md)
+!!! NEW [Go to mobile version](Flutter%20app/mobile_README.md)
 
 > Produce a recycling app based on an image classifier
 
