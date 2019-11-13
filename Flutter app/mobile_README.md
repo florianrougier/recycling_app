@@ -25,6 +25,7 @@ Minimum Viable Product (MVP) that represents how to create a mobile app that imp
 ## Demo
 
 Click the image below to watch a demo on youtube:
+
 [![](http://i3.ytimg.com/vi/RdQVJcON6OI/maxresdefault.jpg)](https://youtu.be/RdQVJcON6OI) 
 
 ---
