@@ -2,19 +2,17 @@
 
 # Recycling app - MMWML
 
-> Produce a recycling app based on image classifier
+!!! NEW [Go to mobile version](Flutter%20app/mobile_README.md)
 
-> Our aim is to help people differentiate waste based on its appearance
+> Produce a recycling app based on an image classifier
+
+> Our aim is to help people differentiate waste based on its visual appearance
 
 > deep learning, classifier, transfer learning, waste disposal
 
 [![my badger](https://img.shields.io/badge/mybadger-whatever&nbsp;you&nbsp;want-brightgreen)](http://badges.github.io/badgerbadgerbadger/)
 
 [![First approach to recycling](https://i.pinimg.com/736x/57/4b/a4/574ba4df89498ac8a705119b575eb7c7.jpg)]()
-
-How it works?
-
-[![How it works](http://g.recordit.co/0SFAppGQti.gif)]()
 
 ---
 
