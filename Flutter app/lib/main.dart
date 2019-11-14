@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+
+import 'utils/extractor.dart';
+
+import 'package:recycling_app/screens/splash_screen.dart';
+import 'package:recycling_app/screens/register_screen.dart';
+import 'package:recycling_app/screens/login_screen.dart';
 import 'package:recycling_app/screens/input_screen.dart';
 import 'package:recycling_app/screens/prediction_screen.dart';
-import 'utils/extractor.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,7 +42,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => InputScreen(),
+        '/': (context) => SplashScreen(),
+        '/register': (BuildContext context) => RegisterScreen(),
+        '/login': (BuildContext context) => LoginScreen(),
+        '/input': (context) => InputScreen(),
         '/extractArguments': (context) => ExtractArgumentsScreen(),
       },
       theme: ThemeData.dark(),

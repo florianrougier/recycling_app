@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116249768660",
+    "firebase_url": "https://recycling-app-fb125.firebaseio.com",
+    "project_id": "recycling-app-fb125",
+    "storage_bucket": "recycling-app-fb125.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116249768660:android:3ea01dbfb584b099308141",
+        "android_client_info": {
+          "package_name": "com.makemoneywithml.recycling_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116249768660-vf7o6eg9qcde2bgn85j5acijugqg0ff8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzO_7T7XH71Jcb5IhW7-u5g_njMNImCOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116249768660-vf7o6eg9qcde2bgn85j5acijugqg0ff8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

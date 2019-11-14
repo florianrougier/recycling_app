@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>116249768660-al2uooimlrcc9juevommd66pban3bpjk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.116249768660-al2uooimlrcc9juevommd66pban3bpjk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDaYopEe6l74z8c0L6H3FDFIwNyX9d0wVc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>116249768660</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.makemoneywithml.recyclingApp</string>
+	<key>PROJECT_ID</key>
+	<string>recycling-app-fb125</string>
+	<key>STORAGE_BUCKET</key>
+	<string>recycling-app-fb125.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:116249768660:ios:adef1cba0342e7fe308141</string>
+	<key>DATABASE_URL</key>
+	<string>https://recycling-app-fb125.firebaseio.com</string>
+</dict>
+</plist>
