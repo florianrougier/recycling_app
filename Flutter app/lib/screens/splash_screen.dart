@@ -17,8 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     FirebaseAuth.instance
         .currentUser()
         .then((currentUser) => {
-              // TODO: invert this condition, don't have the disconnect option for now so i decided to login all the time, no cookies
-              if (currentUser != null) // ignore: sdk_version_ui_as_code
+              if (currentUser == null) // ignore: sdk_version_ui_as_code
                 // TODO: See why this warning is showing
                 {Navigator.pushReplacementNamed(context, "/login")}
               else // ignore: sdk_version_ui_as_code
